@@ -1,0 +1,7 @@
+# Configuración mínima del CLI de Supabase (supabase link / db push / functions deploy).
+project_id = "isaac-barbershop"
+
+[functions.send-notification]
+# La llaman los clientes sin sesión justo después de reservar o cancelar.
+# La función se protege sola: solo envía una vez por reserva y por tipo.
+verify_jwt = false
